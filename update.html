@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="couchFront">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/update.js"></script>
+</head>
+<body ng-controller="mainController as controller">
+
+<!-- READ -->
+Read Each Row:
+<div class="div-border" ng-repeat="data in controller.posts">
+    <p>Username: <input type="text" ng-model="data.doc.user.username" /></p>
+    <p>First name: {{data.doc.user.firstname}}</p>
+    <p>Last name: {{data.doc.user.lastname}}</p>
+    <p>Date of birth: {{data.doc.user.dateOfBirth}}</p>
+    <p>Forum name: {{data.doc.forum.name}}</p>
+    <p>Forum description: {{data.doc.forum.description}}</p>
+    <p>Post message title: {{data.doc.forumPost.messageTitle}}</p>
+    <p>Post message: {{data.doc.forumPost.message}}</p>
+    <button ng-click="controller.update(data.doc)" type="button">Update this forum post</button>
+</div>
+
+</body>
+</html>

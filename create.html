@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="couchFront">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <title>Create</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/create.js"></script>
+</head>
+<body ng-controller="mainController">
+
+Create a post (document):
+<div class="individual-post">
+    <p>Username: <input type="text" ng-model="newPost.user.username" /></p>
+    <p>First Name: <input type="text" ng-model="newPost.user.firstname" /></p>
+    <p>Last Name: <input type="text" ng-model="newPost.user.lastname" /></p>
+    <p>Date Of Birth: <input type="text" ng-model="newPost.user.dateOfBirth" /></p>
+    <p>Forum Name: <input type="text" ng-model="newPost.forum.name" /></p>
+    <p>Forum Description: <input type="text" ng-model="newPost.forum.description" /></p>
+    <p>Forum Post Message Title: <input type="text" ng-model="newPost.forumPost.messageTitle" /></p>
+    <p>Forum Post Message: <input type="text" ng-model="newPost.forumPost.message" /></p>
+    <input type="button" value="Create new post" ng-click="addPostToDatabase()"/>
+</div>
+<div class="individual-post">
+    <p>username: {{ newPost.user.username }}</p>
+    <p>firstname: {{ newPost.user.firstname }}</p>
+    <p>lastname: {{ newPost.user.lastname }}</p>
+    <p>date of birth: {{ newPost.user.dateOfBirth }}</p>
+    <p>forum name: {{ newPost.forum.name }}</p>
+    <p>description: {{ newPost.forum.description }}</p>
+    <p>message title: {{ newPost.forumPost.messageTitle }}</p>
+    <p>message: {{ newPost.forumPost.message }}</p>
+</div>
+
+</body>
+</html>

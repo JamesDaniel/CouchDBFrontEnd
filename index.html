@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="couchFront">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/2.0.0-beta.17/angular2-all.umd.dev.js"></script>
+    <script src="js/main.js"></script>
+    <title>Title</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-controller="mainController">
+    <!-- CREATE -->
+    Create: <input type="text" ng-model="newForumPost" />
+    <br /><br/>
+
+    <!-- READ -->
+    Read Each Row:
+    <div class="individual-post" ng-repeat="post in posts.rows">
+        <p>Username: {{ post.doc.user.username }}</p>
+        <p>First Name: {{ post.doc.user.firstname }}</p>
+        <p>Last Name: {{ post.doc.user.lastname }}</p>
+        <p>Date Of Birth: {{ post.doc.user.dateOfBirth }}</p>
+        <p>Forum Name: {{ post.doc.forum.name }}</p>
+        <p>Forum Description: {{ post.doc.forum.description }}</p>
+        <p>Forum Post Message Title: {{ post.doc.forumPost.messageTitle }}</p>
+        <p>Forum Post Message: {{ post.doc.forumPost.message }}</p>
+    </div>
+
+</body>
+</html>
