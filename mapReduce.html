@@ -12,6 +12,8 @@
 
 
 Count the number of posts in each forum:
+<!--paragraphs to represent data from javascript object-->
+<!--div will be duplicated by angularJS for each document in database-->
 <div class="div-border" ng-repeat="data in controller.rows">
     <p>Forum name: {{data.key}}</p>
     <p>Number of posts in this forum: {{data.value}}</p>

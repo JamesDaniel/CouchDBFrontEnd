@@ -10,6 +10,7 @@
 <body ng-controller="mainController">
 
 Create a post (document):
+<!--input fields-->
 <div class="individual-post">
     <p>Username: <input type="text" ng-model="newPost.user.username" /></p>
     <p>First Name: <input type="text" ng-model="newPost.user.firstname" /></p>
@@ -21,6 +22,7 @@ Create a post (document):
     <p>Forum Post Message: <input type="text" ng-model="newPost.forumPost.message" /></p>
     <input type="button" value="Create new post" ng-click="addPostToDatabase()"/>
 </div>
+<!--paragraphs with content bound to the input fields-->
 <div class="individual-post">
     <p>username: {{ newPost.user.username }}</p>
     <p>firstname: {{ newPost.user.firstname }}</p>

@@ -12,6 +12,8 @@
 
 <!-- READ -->
 Read Each Row:
+<!--paragraphs to represent data from javascript object-->
+<!--div will be duplicated by angularJS for each document in database-->
 <div class="div-border" ng-repeat="data in controller.posts">
     <p>Username: <input type="text" ng-model="data.doc.user.username" /></p>
     <p>First name: {{data.doc.user.firstname}}</p>
@@ -21,6 +23,7 @@ Read Each Row:
     <p>Forum description: {{data.doc.forum.description}}</p>
     <p>Post message title: {{data.doc.forumPost.messageTitle}}</p>
     <p>Post message: {{data.doc.forumPost.message}}</p>
+    <!--button will call a javascript function to make a PUT request-->
     <button ng-click="controller.update(data.doc)" type="button">Update this forum post</button>
 </div>
 

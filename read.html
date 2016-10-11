@@ -12,6 +12,8 @@
 
 <!-- READ -->
 Read Each Row:
+<!--paragraphs to represent data from javascript object-->
+<!--div will be duplicated by angularJS for each document in database-->
 <div class="div-border" ng-repeat="data in controller.posts">
     <p>Username: {{data.doc.user.username}}</p>
     <p>First name: {{data.doc.user.firstname}}</p>

@@ -1,0 +1,1 @@
+This system was developed in and only tested to work with firefox.
