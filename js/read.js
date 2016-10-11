@@ -25,6 +25,7 @@ var myApp = angular.module("couchFront", [])
                 }
             }
         ];
+
         var req = {
             method: 'GET',
             url: 'http://localhost:5984/forum_post/_all_docs?include_docs=true'

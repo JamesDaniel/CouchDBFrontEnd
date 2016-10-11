@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="couchFront">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+    <title>Map Reduce</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/mapReduce.js"></script>
+</head>
+<body ng-controller="mainController as controller">
+
+
+Count the number of posts in each forum:
+<div class="div-border" ng-repeat="data in controller.rows">
+    <p>Forum name: {{data.key}}</p>
+    <p>Number of posts in this forum: {{data.value}}</p>
+</div>
+
+</body>
+</html>
